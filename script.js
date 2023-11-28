@@ -1,27 +1,7 @@
-//your JS code here. If required.
-let years = prompt(" enter year");
-function numberOFDays(year){
-	if(year % 4 === 0)
-{
-	if(year%100=== 0)
-	{
-		if(year%400 ===0)
-		{
-			console.log(366)
-		}
-		else
-		{
-			coonsole.log(365)
-		}
+function numberOfDays(year){
+	function isleapyear(year){
+		return ((year%4===0 &&  year%100!==0)||(year%400===0))
 	}
-	else
-	{
-		console.log(366)
-	}
+	return isleapyear(year) ? 366 : 365;
 }
-else
-{
-	console.log(365)
-}
-}
-numberOFDays(years);
+let year=prompt("enter year");
